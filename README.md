@@ -1,7 +1,6 @@
 # AdrBubbleBooter.VPKEdition
 Adrenaline Bubble Booter VPK Edition (C) 2017-2020 LMAN &lt;LeecherMan>
 
-Adrenaline Bubble Booter VPK Edition (C) 2017-2020 LMAN <LeecherMan>
 
 Directly boot any PSP file (ISO\CSO\PBP\PSOne) from LiveArea's Bubbles.
 
