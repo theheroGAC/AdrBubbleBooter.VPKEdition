@@ -1,71 +1,132 @@
 # AdrBubbleBooter.VPKEdition
-Adrenaline Bubble Booter VPK Edition (C) 2017-2020 LMAN &lt;LeecherMan>
 
+[![Version](https://img.shields.io/badge/Version-1.3-blue.svg)](https://github.com/yourusername/AdrBubbleBooter.VPKEdition/releases)
+[![License](https://img.shields.io/badge/License-Unlicense-lightgrey.svg)](LICENSE)
 
-Directly boot any PSP file (ISO\CSO\PBP\PSOne) from LiveArea's Bubbles.
+Adrenaline Bubble Booter VPK Edition (C) 2017-2020 LMAN (LeecherMan)
 
-v0.9:
--Rewrote booter codes and updated adrenaline version to v6.8.
--Re-added ability to use any png image as startdat boot logo when booting bubbles -> Add any 24bit png image with size of 480x272 into bubble data folder ex. data/boot.png.
--Added ability to automatically load any saved state upon booting bubbles for each bubbles -> Adjust Auto Load State option in Booter tab in Adrenaline menu.
--Added ability to skip auto load saved state if enabled upon booting bubbles when holding L-Trigger while booting bubble.
--Added ability to restart booter -> Go to Booter tab in Adrenaline menu and press on the 'Restart Booter' option.
--Added ability to reset booter settings -> Go to Booter tab in Adrenaline menu and press on the 'Reset Booter Settings' option.
--Added ability to exit game from booter tab -> Go to Booter tab in Adrenaline menu and press on the 'Exit Game' option.
--Added ability to suspend game when opening adrenaline menu -> Adjust the Suspend option in Booter tab in Adrenaline menu.
--Added ability to change Adrenaline menu colors by editing the colors in 'menucolor.bin' file.
--Added a new option to Adrenaline settings to keep aspect ratio when scaling psp or pops screen in Adrenaline menu.
--Added date, time and battery percentage string to Adrenaline menu title.
--Updated 'PS button' for Booter mode -> You can change it to open Adrenaline menu or Go to LiveArea screen -> Adjust PS Button option in Booter tab in Adrenaline menu.
--Updated minor code in Adrenaline regarding saving state to prevent losing the existing saved state file if an error occurred.
--Updated the included AdrBubbleBooterCreator to the latest version.
--Some other minor changes.
+Directly boot any PSP file (ISO, CSO, PBP, PSOne) from your PS Vita's LiveArea.
 
-v1.0:
--Updated adrenaline version to v6.9.
--Added ability to change game cpu clock speed per bubble.
--Added ability to enable or disable high memory layout per bubble.
--Added ability to enable or disable nonpdrm engine per bubble.
--Re-added ability to enable or disable plugins option per bubble.
--Updated CPU speed list with more values for both adrenaline and booter.
--Updated configuration binary file for booter.
--Some minor typo-change.
+---
 
-v1.1:
--Restore visibility of the USB option on non PSVTV.
--Fixed AdrBubbleBooter installer typo version of the LiveArea bubble.
+## 📖 Table of Contents
 
-v1.2:
--Updated 'PS button' for Booter mode with a new option.
--Improved frame pacing when using Original graphics mode by CruelTott.
--Fixed "Cannot access the virtual memory card" issue for PSOne.
+- [Features](#-features)
+- [Compatibility](#-compatibility)
+- [Installation](#-installation)
+- [Usage](#-usage)
+- [Creating Bubbles](#-creating-bubbles)
+- [Configuration](#-configuration)
+- [Changelog](#-changelog)
+- [Troubleshooting](#-troubleshooting)
+- [Donations](#-donations)
+- [Credits](#-credits)
+- [Disclaimer](#-disclaimer)
 
-v1.3:
--Updated adrenaline version to v7.0.
--Added suspend threads option to adrenaline bubble menu.
+## ✨ Features
 
-Like my works, you can buy me a cup of coffee:
-https://sites.google.com/site/theleecherman/donate
+*   **Direct Boot:** Launch PSP ISOs, CSOs, PBPs, and PSOne games directly from LiveArea bubbles.
+*   **Per-Bubble Configuration:**
+    *   Custom CPU clock speed
+    *   Toggle High Memory Layout
+    *   Enable/Disable Nonpdrm engine
+    *   Manage plugins individually
+    *   Auto-load specific saved states on boot (cancelable by holding L)
+*   **Customization:**
+    *   Use any 480x272 PNG image as a custom boot logo.
+    *   Change Adrenaline menu colors via `menucolor.bin`.
+*   **Enhanced Menu:** Adrenaline menu displays date, time, and battery percentage.
+*   **Quality of Life:**
+    *   Suspend game when opening Adrenaline menu.
+    *   Remap PS button function (Open Menu or LiveArea).
+    *   Keep aspect ratio option for scaling.
+    *   Improved frame pacing in Original graphics mode.
+    *   Restart or reset the booter from the menu.
+    *   Exit game directly from the booter tab.
 
-Homepage:
-If you want to check for latest updates, plugins, tools: 
-https://sites.google.com/site/theleecherman
+## ✅ Compatibility
 
-Usage:
--Install Adrenaline v6.X and 661.PBP file if it is not already installed,
- then run it from the bubble and make sure it's working fine before doing anything.
-*** THIS IS JUST ONE TIME UNLESS THERE IS A NEW UPDATED VERSION ***
--Copy 'AdrBubbleBooterInstaller.vpk' to your PSVita 'ux0:' then install and run it
- to install\update the required files for AdrBubbleBooter, after that remove it if you want.
--Reboot the PSVita for changes to take effect if it is not rebooted by the installer.
-*** THIS IS FOR MAKING BUBBLE FOR EACH FILE ***
--Start AdrBubbleBooterCreator.exe and fill the required fields then press 'Create' button
- to create a VPK file for each file you want to direct boot it, after that copy the generated
- VPK file to your PSVita and install it.
-*** THIS IS FOR CHANGING BOOT CONFIGS FOR THE BOOTED BUBBLE ***
--Start the PSVita and boot the created VPK bubble, open adrenaline menu and go to Booter tab
- then change the settings and exit the menu to save the configs.
+*   **Requires:** A PS Vita (PCH-1000 or PCH-2000) or PS TV (VTE-1000) with custom firmware (HENkaku/enso).
+*   **Requires:** [Adrenaline](https://github.com/TheOfficialFloW/Adrenaline) v6.0 or later and the `661.PBP` firmware file.
 
-Credits and special thanks to TheFloW.
+## 📥 Installation
 
-Enjoy :)
+### Prerequisites
+1.  Ensure **Adrenaline** is installed and working correctly on your device.
+2.  Make sure the `661.PBP` file is placed in the correct location (usually `ux0:app/PSPEMUCFW/`).
+
+### Installing the Booter
+1.  Copy the `AdrBubbleBooterInstaller.vpk` file to the root of your Vita's `ux0:` partition.
+2.  Use a homebrew app like VitaShell to browse to the file and install it.
+3.  Run the **AdrBubbleBooterInstaller** bubble once to install the necessary files.
+4.  *(Optional but recommended)*: Reboot your PS Vita for all changes to take effect.
+5.  You can now delete the `AdrBubbleBooterInstaller.vpk` and its bubble.
+
+## 🎮 Usage
+
+### Creating Bubbles
+To create a bubble for a specific game or homebrew:
+1.  On your PC, run `AdrBubbleBooterCreator.exe`.
+2.  Fill in the required fields (e.g., path to the game file, title ID, name, icon image).
+3.  Click the "Create" button to generate a `.vpk` file.
+4.  Transfer this `.vpk` file to your Vita and install it like any other homebrew. A new bubble will appear on your LiveArea.
+
+### Configuration
+Each bubble can be configured individually:
+1.  Boot the game from its newly created bubble.
+2.  Open the **Adrenaline menu** (usually by pressing the **PS button** + **Select**).
+3.  Navigate to the **"Booter"** tab.
+4.  Adjust the settings to your preference (CPU speed, auto-load state, etc.).
+5.  Exit the menu to save the configuration for that specific bubble.
+
+## 📋 Changelog
+
+### v1.3
+- Updated Adrenaline to v7.0.
+- Added suspend threads option to the menu.
+
+### v1.2
+- Added new PS button option.
+- Improved frame pacing (Original graphics mode).
+- Fixed "Cannot access the virtual memory card" issue for PSOne games.
+
+### v1.1
+- Restored USB option visibility on non-PSTV devices.
+- Fixed a typo in the installer.
+
+### v1.0
+- Updated Adrenaline to v6.9.
+- Added per-bubble CPU clock, high memory, nonpdrm, and plugin settings.
+- Updated configuration file structure.
+
+### v0.9
+- Initial public release with rewritten code (Adrenaline v6.8).
+- Added custom boot logo, auto-load states, menu color editing, and many other features.
+
+[View full changelog](CHANGELOG.md)
+
+## 🛠️ Troubleshooting
+
+*   **"Adrenaline couldn't find the 661.PBP"**: Ensure Adrenaline is fully installed and working on its own first.
+*   **Game doesn't boot**: Double-check the file path used in the Bubble Creator. The game file must be accessible from the Vita (e.g., in `ux0:pspemu/ISO/`).
+*   **Bubble crashes**: Try rebuilding the database via Safe Mode (hold POWER + PS + R Shoulder buttons on boot).
+
+## ❤️ Donations
+
+If you appreciate this project and want to support the developer, you can buy them a coffee:
+
+[**Donate via PayPal**](https://sites.google.com/site/theleecherman/donate)
+
+## 🙏 Credits
+
+*   **TheFloW**: For the incredible Adrenaline PSP emulator.
+*   **LMAN (LeecherMan)**: For creating and maintaining AdrBubbleBooter.
+*   **CruelTott**: For improvements to frame pacing.
+
+**Homepage for more tools and updates:** [TheLeecherMan's Site](https://sites.google.com/site/theleecherman)
+
+---
+
+## ⚠️ Disclaimer
+
+This software is provided "as is", without any warranty. Use it at your own risk. The developers are not responsible for any damage to your device or account.
