@@ -3,6 +3,9 @@
 [![Version](https://img.shields.io/badge/Version-1.3-blue.svg)](https://github.com/yourusername/AdrBubbleBooter.VPKEdition/releases)
 [![License](https://img.shields.io/badge/License-Unlicense-lightgrey.svg)](LICENSE)
 
+> **Note: This is an archive and mirror repository.**
+> The original project by LMAN (LeecherMan) has been discontinued and its original homepage is no longer available. This repository exists solely to preserve the source code, compiled binaries, and documentation for historical, educational, and maintenance purposes within the PS Vita homebrew community.
+
 Adrenaline Bubble Booter VPK Edition (C) 2017-2020 LMAN (LeecherMan)
 
 Directly boot any PSP file (ISO, CSO, PBP, PSOne) from your PS Vita's LiveArea.
